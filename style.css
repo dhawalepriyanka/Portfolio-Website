@@ -8,6 +8,32 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
+#menu-icon {
+    display: none;
+}
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100px; /* just below header */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0; /* hidden by default */
+        transition: max-height 0.3s ease-in-out; /* smooth slide */
+    }
+
+    
+    .navbar.show {
+        max-height: 300px; /* visible */
+    }
+}
+
 
 /* ===== HEADER / NAVBAR ===== */
 .header {
